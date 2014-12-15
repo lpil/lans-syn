@@ -2,7 +2,7 @@
 
 Louis' [ANS Synthesizer](http://en.wikipedia.org/wiki/ANS_synthesizer)
 
-## License
+## Licence
 
     LANS Synthesizer
     Copyright 2014 Louis Pilfold
