@@ -1,4 +1,4 @@
-# lans-synthesizer
+# lans-syn
 
 Louis' [ANS Synthesizer](http://en.wikipedia.org/wiki/ANS_synthesizer)
 

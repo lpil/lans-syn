@@ -1,4 +1,4 @@
-(ns lans-synthesizer.core)
+(ns lans-syn.core)
 
 (defn foo
   "I don't do a whole lot."

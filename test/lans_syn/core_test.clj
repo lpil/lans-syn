@@ -1,6 +1,6 @@
-(ns lans-synthesizer.core-test
+(ns lans-syn.core-test
   (:require [clojure.test :refer :all]
-            [lans-synthesizer.core :refer :all]))
+            [lans-syn.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
