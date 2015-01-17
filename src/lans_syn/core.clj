@@ -11,21 +11,18 @@
   []
   (prn (take 720 (range))))
 
-
-(defn TET12-note->freq
-  "Converts a note number to it's frequency.
-  Reference pitch is 440 hertz"
-  [note]
-  (let [reference-pitch 440
-        twelth-root-of-one (tow/expt 2 (/ 1 12)) ]
-    (* reference-pitch
-       (tow/expt twelth-root-of-one (- note 49)))))
+(defn TET-N-note->freq
+  "Converts a TET N note number to it's frequency, where N is the
+  number of semitones per octave in that scale.
+  Reference pitch is A4: 440 hertz"
+  [note semitones-per-octave]
+  (let [bottom-freq 16.352
+        TET-freq-ratio (tow/expt 2 (/ 1 semitones-per-octave))]
+    (* bottom-freq
+       (tow/expt TET-freq-ratio note))))
 
 (defn TET72-note->freq
-  "Converts a note number to it's frequency.
+  "Converts a note number to it's frequency for TET72.
   Reference pitch is 440 hertz"
   [note]
-  (let [bottom-freq 16.352
-        TET72-freq-ratio (tow/expt 2 (/ 1 72))]
-    (* bottom-freq
-       (tow/expt TET72-freq-ratio note))))
+  (TET-N-note->freq note 72))
