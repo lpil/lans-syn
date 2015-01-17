@@ -12,9 +12,9 @@
   (prn (take 720 (range))))
 
 
-(defn note->freq
+(defn eq-temp-note->freq
   "Converts a note number to it's frequency.
-  Reverence pitch is 440 hertz"
+  Reference pitch is 440 hertz"
   [note]
   (let [reference-pitch 440
         twelth-root-of-one (tow/expt 2 (/ 1 12)) ]
