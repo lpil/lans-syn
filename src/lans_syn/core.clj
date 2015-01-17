@@ -6,4 +6,14 @@
   (:require [lans-syn.theory :as theory]
             [overtone.live :as o]))
 
+(o/definst voice
+  [freq 440
+   amp 1]
+  (* amp (o/sin-osc freq)))
 
+(defn build-voices
+  "Set up the oscillators, muted"
+  []
+  (vec (map
+         #(voice (theory/TET72-note->freq %) 0)
+         (take 720 (range)))))
